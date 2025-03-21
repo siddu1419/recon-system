@@ -6,8 +6,8 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '21' // Updated to Java 21
-targetCompatibility = '21' // Added target compatibility
+sourceCompatibility = '17'
+targetCompatibility = '17'
 
 configurations {
 	compileOnly {

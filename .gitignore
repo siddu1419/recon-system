@@ -1,5 +1,5 @@
 HELP.md
-.gradle
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -18,7 +18,7 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -35,3 +35,29 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Environment variables
+.env
+.env.*
+
+# Docker volumes
+data/
+postgres-data/
+kafka-data/
+zookeeper-data/
+
+# Logs
+*.log
+logs/
+
+# Build output
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# OS specific
+.DS_Store
+Thumbs.db
