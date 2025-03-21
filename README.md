@@ -26,7 +26,6 @@ This is a robust reconciliation system designed to handle large-scale transactio
 - Docker Desktop (Mac/Windows) or Colima (Mac)
 - Java 17 or higher
 - Maven or Gradle
-- Minimum 8GB RAM recommended
 
 ## Getting Started
 
