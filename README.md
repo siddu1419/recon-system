@@ -248,7 +248,7 @@ Response:
 
 ## Important Notes
 1. Always create a transaction first and use the returned `transactionId` when uploading reconciliation files
-2.Cross check all ports 8080,5433,9092,2181 are available
+2. Cross check all ports 8080,5433,9092,2181 are available
 3. Ensure the CSV file format matches the provided sample
 4. The system uses Kafka for asynchronous processing, so there might be a slight delay in reconciliation updates
 
@@ -257,4 +257,3 @@ Response:
 - Check Docker logs using `docker-compose logs -f [service-name]`
 - Verify the `.env` file is properly configured
 - Ensure sufficient system resources are available 
--
