@@ -53,7 +53,7 @@ public class FileProcessingService {
                 }
 
                 // Parse and send settlement record directly
-                SettlementRecord record = parseSettlementRecord(line);
+                SettlementRecord record = parseSettlementRecord(line,batchId);
                 kafkaProducerService.sendSettlementMessage(record);
             }
         } catch (IOException | CsvValidationException e) {
@@ -67,13 +67,14 @@ public class FileProcessingService {
      * @param line A single row from the CSV file as a string array.
      * @return A populated SettlementRecord object.
      */
-    private SettlementRecord parseSettlementRecord(String[] line) {
+    private SettlementRecord parseSettlementRecord(String[] line,String batchId) {
         SettlementRecord record = new SettlementRecord();
         record.setTransactionId(line[0].trim());
         record.setUserId(line[1].trim());
         record.setAmount(new BigDecimal(line[2].trim()));
         record.setUserBankAccountId(line[3].trim());
         record.setPartnerBankAccountId(line[4].trim());
+        record.setBatchId(batchId);
         return record;
     }
 }

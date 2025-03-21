@@ -1,5 +1,8 @@
 package com.example.ReconciliationApplication.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
@@ -13,6 +16,8 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SettlementRecord {
     /**
      * The unique identifier of the transaction
@@ -38,4 +43,6 @@ public class SettlementRecord {
      * The ID of the partner's bank account
      */
     private String partnerBankAccountId;
+
+    private String batchId;
 }

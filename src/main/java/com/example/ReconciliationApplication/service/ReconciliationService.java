@@ -86,6 +86,7 @@ public class ReconciliationService {
         settlement.setSettledAmount(record.getAmount());
         settlement.setUserBankAccountId(record.getUserBankAccountId());
         settlement.setPartnerBankAccountId(record.getPartnerBankAccountId());
+        settlement.setBatchId(record.getBatchId());
         return settlement;
     }
 
